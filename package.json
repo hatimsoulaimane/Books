@@ -1,0 +1,31 @@
+{
+  "name": "bookstore_api",
+  "version": "1.0.0",
+  "description": "API of books renting",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hatimsoulaimane/Books.git"
+  },
+  "author": "Lynn, Miguel, Soulaiman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hatimsoulaimane/Books/issues"
+  },
+  "homepage": "https://github.com/hatimsoulaimane/Books#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.4.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.2.5"
+  }
+}
