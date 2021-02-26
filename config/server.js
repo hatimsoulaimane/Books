@@ -1,10 +1,9 @@
 const express = require('express'),
         bodyParser = require('body-parser'),
         cors = require('cors'),
-        cookieParser = require('cookie-parser');
-
-// server routes/controllers
-const routes = require('./routes/index');        
+        cookieParser = require('cookie-parser'),
+        controllers = require('../controllers/index'),
+        routes =require ('./routes/index');      
 
 
 const app = express();
@@ -22,8 +21,10 @@ app.use(cors());
 app.use(cookieParser());
 
 //config de la route principale
-app.use('/bookstore_api', routes());
-console.log('salut');
+app.get('/', function (request, response) {
+    response.json({ message: 'salut! ' });
+});
+app.use('/bookstore_api', routes(express, controllers));
 
 module.exports =  app;
 

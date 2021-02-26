@@ -1,9 +1,9 @@
 module.exports = (services) => {
     const user_controller = {
-        getAll: async (req,res) => {
-            let result = await services.user.getAll();
+        getAllUsers: async (req,res) => {
+            let result = await services.user.getAllUsers();
             res.send(result);
         },
     }
-
+    return user_controller;
 }
