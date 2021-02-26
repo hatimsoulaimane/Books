@@ -1,9 +1,9 @@
-const repositories = require('../repositories');
-
 module.exports = (repositories) => {
     const user_service= {
-        getAllUsers: async () => {
-            return repositories.user.getAllUsers();
+        getAllUsers: async (data) => {
+            const user = await repositories.user.getAllUsers();
+            console.log("USER =>", user)
+            return user
         }
     }
     
